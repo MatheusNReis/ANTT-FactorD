@@ -1,1 +1,1 @@
-
+The 'Fator D - Resumo Segmentos.bas' file may be used either for vertical or horizontal signage analysis, including both analysis at the same time. It should be applied in the results found by the algorithms in Vertical and Horizontal Signage folders.
