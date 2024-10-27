@@ -1,7 +1,7 @@
 Attribute VB_Name = "Módulo1HelloMoto3"
 Sub SOBRE()
 
-
+'informações
 'Show copyright VBA macro messages
 
 'Mostra mensagem de macro VBA de direitos autorais
