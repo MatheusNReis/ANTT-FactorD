@@ -1,4 +1,4 @@
-Attribute VB_Name = "Módulo1HelloMoto"
+Attribute VB_Name = "Módulo1HelloMoto2"
 Sub SOBRE()
 
 
