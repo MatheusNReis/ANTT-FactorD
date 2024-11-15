@@ -9,7 +9,7 @@ Sub AnaliseFLECHAS()
 'Copyright © 2024 Matheus Nunes Reis. All rights reserved.
 
 'GitHub: MatheusNReis
-'License: 
+'License: https://raw.githubusercontent.com/MatheusNReis/ANTT-FactorD/9066fa5ce0ea2d9c0dd456a4dc22dadb14aa15e9/LICENSE.md
 'MIT License. Copyright © 2024 MatheusNReis
     
     
