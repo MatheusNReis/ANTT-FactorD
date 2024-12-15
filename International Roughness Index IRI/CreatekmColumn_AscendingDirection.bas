@@ -10,7 +10,7 @@ Sub CriaColunakm_SentidoCrescente()
 'Copyright © 2024 Matheus Nunes Reis. All rights reserved.
 
 'GitHub: MatheusNReis
-'License:
+'License: https://raw.githubusercontent.com/MatheusNReis/ANTT-FactorD/677e3b845d12e558a681e9e7b02176cb840fa511/LICENSE.md
 'MIT License. Copyright © 2024 MatheusNReis
 
 
