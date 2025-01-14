@@ -174,13 +174,13 @@ Sub CompararPlanilha2()
             '--
                 'Neste ponto, 'km' correspondente foi encontrado na linha inicial do intervalo atual
                 'LinhaInicial deve ser >= 2
-                If (StartRowCompilado - 12) < 2 Then
+                If (StartRowCompilado - 30) < 2 Then
                     LinhaInicial = 2
                 Else
-                    LinhaInicial = (StartRowCompilado - 12)
+                    LinhaInicial = (StartRowCompilado - 30)
                 End If
                 
-                For j = LinhaInicial To (StartRowCompilado + 12)
+                For j = LinhaInicial To (StartRowCompilado + 30)
                     If ThisWorkbook.Sheets("Compilado").Cells(j, "B").Value = works.Cells(i, Identificacao).MergeArea.Cells(1, 1).Value Then
                     'Ao chegar neste ponto é porque foi encontrada a 1ª linha na qual 'km' e 'identificação' são correspondentes
                         For k = j To (j + 2)
@@ -199,13 +199,13 @@ Sub CompararPlanilha2()
             '--
                 'Neste ponto, 'km' correspondente foi encontrado na última linha do intervalo atual
                 'LinhaInicial deve ser >= 2
-                If (LastRowCompilado - 12) < 2 Then
+                If (LastRowCompilado - 30) < 2 Then
                     LinhaInicial = 2
                 Else
-                    LinhaInicial = (LastRowCompilado - 12)
+                    LinhaInicial = (LastRowCompilado - 30)
                 End If
                 
-                For j = LinhaInicial To (LastRowCompilado + 12)
+                For j = LinhaInicial To (LastRowCompilado + 30)
                     If ThisWorkbook.Sheets("Compilado").Cells(j, "B").Value = works.Cells(i, Identificacao).MergeArea.Cells(1, 1).Value Then
                     'Ao chegar neste ponto é porque foi encontrada a 1ª linha na qual 'km' e 'identificação' são correspondentes
                         For k = j To (j + 2)
@@ -231,13 +231,13 @@ Sub CompararPlanilha2()
             '--
                 'Neste ponto, 'km' correspondente foi encontrado na linha central do intervalo atual
                 'LinhaInicial deve ser >= 2
-                If (midRowCompilado - 12) < 2 Then
+                If (midRowCompilado - 30) < 2 Then
                     LinhaInicial = 2
                 Else
-                    LinhaInicial = (midRowCompilado - 12)
+                    LinhaInicial = (midRowCompilado - 30)
                 End If
                 
-                For j = LinhaInicial To (midRowCompilado + 12)
+                For j = LinhaInicial To (midRowCompilado + 30)
                     If ThisWorkbook.Sheets("Compilado").Cells(j, "B").Value = works.Cells(i, Identificacao).MergeArea.Cells(1, 1).Value Then
                     'Ao chegar neste ponto é porque foi encontrada a 1ª linha na qual 'km' e 'identificação' são correspondentes
                         For k = j To (j + 2)
