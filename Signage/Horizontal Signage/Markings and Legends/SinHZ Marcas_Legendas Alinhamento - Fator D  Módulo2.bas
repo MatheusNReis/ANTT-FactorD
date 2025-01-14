@@ -9,11 +9,11 @@ Sub CompararPlanilha2()
 'Substitui e/ou adiciona, em planilha anteriormente organizada, dados de marcas e legendas de
 'sinalização horizontal provindos de planilha complementar
 
-'Created by Matheus Nunes Reis on 27/10/2024
+'Created by Matheus Nunes Reis on 23/10/2024
 'Copyright © 2024 Matheus Nunes Reis. All rights reserved.
 
-'GitHub: MatheusNReis
-'License: https://raw.githubusercontent.com/MatheusNReis/ANTT-FactorD/a9683ff1e55f7a31808dee2140e0e29ed33423de/LICENSE.md
+'GitHub: https://github.com/MatheusNReis/ANTT-FactorD/blob/main/Signage/README.md
+'License: https://github.com/MatheusNReis/ANTT-FactorD/blob/main/LICENSE.md
 'MIT License. Copyright © 2024 MatheusNReis
 
 
@@ -169,15 +169,15 @@ Sub CompararPlanilha2()
             '--
                 'Neste ponto, 'km' correspondente foi encontrado na linha inicial do intervalo atual
                 'LinhaInicial deve ser >= 2
-                If (StartRowCompilado - 12) < 2 Then
+                If (StartRowCompilado - 30) < 2 Then
                     LinhaInicial = 2
                 Else
-                    LinhaInicial = (StartRowCompilado - 12)
+                    LinhaInicial = (StartRowCompilado - 30)
                 End If
                 
-                For j = LinhaInicial To (StartRowCompilado + 12)
-                    If ThisWorkbook.Sheets("Compilado").Cells(j, "C").Value = works.Cells(i, Latitude).MergeArea.Cells(1, 1).Value And _
-                        ThisWorkbook.Sheets("Compilado").Cells(j, "D").Value = works.Cells(i, Longitude).MergeArea.Cells(1, 1).Value And _
+                For j = LinhaInicial To (StartRowCompilado + 30)
+                    If Truncate(ThisWorkbook.Sheets("Compilado").Cells(j, "C").Value, 6) = Truncate(works.Cells(i, Latitude).MergeArea.Cells(1, 1).Value, 6) And _
+                        Truncate(ThisWorkbook.Sheets("Compilado").Cells(j, "D").Value, 6) = Truncate(works.Cells(i, Longitude).MergeArea.Cells(1, 1).Value, 6) And _
                         ThisWorkbook.Sheets("Compilado").Cells(j, "E").Value = works.Cells(i, TipoSinalizacao).MergeArea.Cells(1, 1).Value And _
                         ThisWorkbook.Sheets("Compilado").Cells(j, "F").Value = works.Cells(i, Cor).MergeArea.Cells(1, 1).Value Then
                     'Ao chegar neste ponto é porque foi encontrada a 1ª linha na qual 'km', 'Latitude', 'Longitude', 'TipoSinalizacao' e 'Cor' são correspondentes
@@ -187,21 +187,22 @@ Sub CompararPlanilha2()
                            
                         Exit Do
                     End If
+                    
                 Next j
             '--
             ElseIf ThisWorkbook.Sheets("Compilado").Cells(LastRowCompilado, "B").Value = kmValueWorks Then
             '--
                 'Neste ponto, 'km' correspondente foi encontrado na última linha do intervalo atual
                 'LinhaInicial deve ser >= 2
-                If (LastRowCompilado - 12) < 2 Then
+                If (LastRowCompilado - 30) < 2 Then
                     LinhaInicial = 2
                 Else
-                    LinhaInicial = (LastRowCompilado - 12)
+                    LinhaInicial = (LastRowCompilado - 30)
                 End If
                 
-                For j = LinhaInicial To (LastRowCompilado + 12)
-                    If ThisWorkbook.Sheets("Compilado").Cells(j, "C").Value = works.Cells(i, Latitude).MergeArea.Cells(1, 1).Value And _
-                        ThisWorkbook.Sheets("Compilado").Cells(j, "D").Value = works.Cells(i, Longitude).MergeArea.Cells(1, 1).Value And _
+                For j = LinhaInicial To (LastRowCompilado + 30)
+                    If Truncate(ThisWorkbook.Sheets("Compilado").Cells(j, "C").Value, 6) = Truncate(works.Cells(i, Latitude).MergeArea.Cells(1, 1).Value, 6) And _
+                        Truncate(ThisWorkbook.Sheets("Compilado").Cells(j, "D").Value, 6) = Truncate(works.Cells(i, Longitude).MergeArea.Cells(1, 1).Value, 6) And _
                         ThisWorkbook.Sheets("Compilado").Cells(j, "E").Value = works.Cells(i, TipoSinalizacao).MergeArea.Cells(1, 1).Value And _
                         ThisWorkbook.Sheets("Compilado").Cells(j, "F").Value = works.Cells(i, Cor).MergeArea.Cells(1, 1).Value Then
                     'Ao chegar neste ponto é porque foi encontrada a 1ª linha na qual 'km', 'Latitude', 'Longitude', 'TipoSinalizacao' e 'Cor' são correspondentes
@@ -211,6 +212,7 @@ Sub CompararPlanilha2()
                         
                         Exit Do
                     End If
+                    
                 Next j
             '--
             End If
@@ -224,15 +226,15 @@ Sub CompararPlanilha2()
             '--
                 'Neste ponto, 'km' correspondente foi encontrado na linha central do intervalo atual
                 'LinhaInicial deve ser >= 2
-                If (midRowCompilado - 12) < 2 Then
+                If (midRowCompilado - 30) < 2 Then
                     LinhaInicial = 2
                 Else
-                    LinhaInicial = (midRowCompilado - 12)
+                    LinhaInicial = (midRowCompilado - 30)
                 End If
                 
-                For j = LinhaInicial To (midRowCompilado + 12)
-                    If ThisWorkbook.Sheets("Compilado").Cells(j, "C").Value = works.Cells(i, Latitude).MergeArea.Cells(1, 1).Value And _
-                        ThisWorkbook.Sheets("Compilado").Cells(j, "D").Value = works.Cells(i, Longitude).MergeArea.Cells(1, 1).Value And _
+                For j = LinhaInicial To (midRowCompilado + 30)
+                    If Truncate(ThisWorkbook.Sheets("Compilado").Cells(j, "C").Value, 6) = Truncate(works.Cells(i, Latitude).MergeArea.Cells(1, 1).Value, 6) And _
+                        Truncate(ThisWorkbook.Sheets("Compilado").Cells(j, "D").Value, 6) = Truncate(works.Cells(i, Longitude).MergeArea.Cells(1, 1).Value, 6) And _
                         ThisWorkbook.Sheets("Compilado").Cells(j, "E").Value = works.Cells(i, TipoSinalizacao).MergeArea.Cells(1, 1).Value And _
                         ThisWorkbook.Sheets("Compilado").Cells(j, "F").Value = works.Cells(i, Cor).MergeArea.Cells(1, 1).Value Then
                     'Ao chegar neste ponto é porque foi encontrada a 1ª linha na qual 'km', 'Latitude', 'Longitude', 'TipoSinalizacao' e 'Cor' são correspondentes
@@ -242,6 +244,7 @@ Sub CompararPlanilha2()
                 
                         Exit Do
                     End If
+                    
                 Next j
             '--
             ElseIf ThisWorkbook.Sheets("Compilado").Cells(midRowCompilado, "B").Value > kmValueWorks Then
@@ -264,12 +267,9 @@ Sub CompararPlanilha2()
                 ThisWorkbook.Sheets("Compilado").Cells(LinhaAdicional, "F").Value = works.Cells(i, Cor).MergeArea.Cells(1, 1).Value
                 If works.Cells(i, MediaRetrorrefletancia).MergeArea.Cells(1, 1).Value = "" Then
                     ThisWorkbook.Sheets("Compilado").Cells(LinhaAdicional, "G").Value = 0
-                Else
-                    ThisWorkbook.Sheets("Compilado").Cells(LinhaAdicional, "G").Value = CDbl(works.Cells(i, MediaRetrorrefletancia).MergeArea.Cells(1, 1).Value)
-                End If
-                If works.Cells(i, MinimaRetrorrefletancia).MergeArea.Cells(1, 1).Value = "" Then
                     ThisWorkbook.Sheets("Compilado").Cells(LinhaAdicional, "H").Value = 0
                 Else
+                    ThisWorkbook.Sheets("Compilado").Cells(LinhaAdicional, "G").Value = CDbl(works.Cells(i, MediaRetrorrefletancia).MergeArea.Cells(1, 1).Value)
                     ThisWorkbook.Sheets("Compilado").Cells(LinhaAdicional, "H").Value = MinimaRetrorrefletancia
                 End If
                 ThisWorkbook.Sheets("Compilado").Cells(LinhaAdicional, "I").Value = Conc_Sup
@@ -278,8 +278,15 @@ Sub CompararPlanilha2()
 
         End If
         
+        
     Next i
     
     MsgBox "Fim do Processo."
     
 End Sub
+
+
+Function Truncate(num As String, places) As Double
+    Truncate = CDbl(Int(num * 10 ^ places) / 10 ^ places)
+End Function
+
