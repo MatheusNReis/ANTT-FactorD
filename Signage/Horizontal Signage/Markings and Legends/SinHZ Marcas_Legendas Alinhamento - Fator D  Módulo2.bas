@@ -12,8 +12,8 @@ Sub CompararPlanilha2()
 'Created by Matheus Nunes Reis on 23/10/2024
 'Copyright © 2024 Matheus Nunes Reis. All rights reserved.
 
-'GitHub: https://github.com/MatheusNReis/ANTT-FactorD/blob/main/Signage/README.md
-'License: https://github.com/MatheusNReis/ANTT-FactorD/blob/main/LICENSE.md
+'GitHub: MatheusNReis
+'License: https://raw.githubusercontent.com/MatheusNReis/ANTT-FactorD/94f3d8e9a3ed9227eb10f7c213d36bb74ff932cd/LICENSE.md
 'MIT License. Copyright © 2024 MatheusNReis
 
 
