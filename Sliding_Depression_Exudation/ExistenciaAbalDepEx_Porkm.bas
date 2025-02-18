@@ -77,7 +77,7 @@ Sub ExistenciaAbalDepEx_Porkm()
     Dim uniqueValues As Variant
     Dim outputRow As Long
     
-    'Intervalo de km's reprovados sem
+    'Intervalo de km's reprovados
     Set rng = Range("A2:A" & LastRowResults)
     
     Set dict = CreateObject("Scripting.Dictionary")
