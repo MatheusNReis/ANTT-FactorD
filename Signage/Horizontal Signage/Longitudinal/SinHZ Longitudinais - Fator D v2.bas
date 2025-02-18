@@ -132,7 +132,7 @@ Sub SinHZ()
     
     FirstLineTrecho = i
     
-    LastRowPlanWorks = works.Cells(Rows.Count, MediaSegmento).End(xlUp).Row
+    LastRowPlanWorks = works.Cells(works.Rows.Count, MediaSegmento).End(xlUp).Row
     
     For i = i To LastRowPlanWorks
     
