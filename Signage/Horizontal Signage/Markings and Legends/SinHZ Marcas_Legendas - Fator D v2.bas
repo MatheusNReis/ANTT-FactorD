@@ -136,7 +136,8 @@ Sub SinHZ_Marcas_Legendas()
     For i = i To LastRowPlanWorks
     
         'Verificação referente à coluna referência
-        If works.Cells(i, MediaRetrorrefletancia).Value < MinimaRetrorrefletancia Then
+        If works.Cells(i, MediaRetrorrefletancia).Value < MinimaRetrorrefletancia And _
+            works.Cells(i, FaixaSinalizacao).Value <> "" Then
             ThisWorkbook.Sheets("Compilado").Cells(linhaPlanCompilado, "A").Value = workb.Name
             ThisWorkbook.Sheets("Compilado").Cells(linhaPlanCompilado, "B").Value = works.Cells(i, Segmento).MergeArea.Cells(1, 1).Value
             ThisWorkbook.Sheets("Compilado").Cells(linhaPlanCompilado, "C").Value = works.Cells(i, km).MergeArea.Cells(1, 1).Value
